@@ -16,10 +16,10 @@ set :ssh_options, {
 }
 
 # Default value for :log_level is :debug
-set :log_level, :info
+set :log_level, :debug
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/initializers/secret_token.rb}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -53,7 +53,7 @@ namespace :deploy do
     end
   end
 
-  # after :publishing, :restart
+  after :publishing, :restart
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
@@ -64,6 +64,6 @@ namespace :deploy do
     end
   end
 
-  after :finishing, 'deploy:cleanup'
+  # after :finishing, 'deploy:cleanup'
 
 end

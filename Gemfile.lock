@@ -333,6 +333,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  capistrano-bundler
   capistrano-rails
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
