@@ -10,6 +10,7 @@ Spree.config do |config|
   # Uncomment to override the default site name.
   config.site_name = "Sportswear - Ropa deportiva"
   config.allow_ssl_in_production = false
+  config.allow_guest_checkout = false
 end
 
 Spree.user_class = "Spree::User"
