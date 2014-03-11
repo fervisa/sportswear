@@ -23,7 +23,7 @@ set :linked_files, %w{config/database.yml config/initializers/devise.rb}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-set :linked_dirs, %w{bin log tmp vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{bin log tmp vendor/bundle public/system public/uploads public/spree}
 
 SSHKit.config.command_map[:rake]  = "bundle exec rake"
 SSHKit.config.command_map[:rails] = "bundle exec rails"
